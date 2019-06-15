@@ -6,10 +6,18 @@ permalink: /design-1/
 
 <h1 class="design-1__big-title">Design 1</h1>
 
+{% assign card = site.data.card-info %}
+
 <main class="design-1__card-wrapper">
 	<section class="design-1-card__dimensions">
 		<div class="design-1-card__content">
-			
+			<div class="design-1-card__name">{{ card.name }}</div>
+			<div class="design-1-card__title">Web Designer & Developer at {{ card.url}}</div>
+			<div class="design-1-card__email">{{ card.email }}</div>
+			<div class="design-1-card__number">{{ card.phone }}</div>
+			<div class="design-1-card__url">{{ card.url }}</div>
+			<div class="design-1-card__twitter">{{ card.twitter }}</div>
+			<div class="design-1-card__github">{{ card.github }}</div>
 		</div>
 	</section>
 </main>
