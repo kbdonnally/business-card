@@ -1,10 +1,10 @@
 ---
 layout: no-style
-title: Design 1
-permalink: /design-1/
+title: Design Info
+permalink: /design-info/
 ---
 
-# Design 1 
+# Design Info
 
 - Safe area: 3.34" x 1.84"
 - Trim: 3.5" x 2"
