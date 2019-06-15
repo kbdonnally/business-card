@@ -20,31 +20,41 @@
 .design-1-card__content {
 	position: relative;
 	display: grid;
-	grid-template-areas: '. name'
+	grid-template-columns: auto 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr auto auto auto 1fr;
+	grid-template-areas: '. .'
+						 '. name'
 						 '. title'
+						 '. .'
 						 'label-url url'
 						 'label-email email'
-						 'label-phone phone';
+						 'label-phone phone'
+						 '. .';
+	align-items: center;
 	height: 1.84in;
 	width: 3.34in;
-	line-height: 1;
+	line-height: 1.2;
 	border: 1px solid gray;
-}
-
-.design-1-card__comment {
-	color: gray;
 }
 
 .design-1-card__name {
 	grid-area: name;
 	font-family: $oswald;
-	font-size: 2em;
+	font-size: 1.5em;
+	text-transform: uppercase;
 }
 
 .design-1-card__title {
 	grid-area: title;
+	font-family: $oswald;
+	font-size: 1.5em;
+	text-transform: uppercase;
 }
 
+[class*="design-1-card__"][class*="--label"] {
+	justify-self: end;
+	padding-right: .5em;
+}
 
 .design-1-card__url {
 	grid-area: url;
