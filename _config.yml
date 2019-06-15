@@ -1,8 +1,8 @@
 title: Business Card Design
 description: >- # this means to ignore newlines until "baseurl:"
   Designing business cards for my web design business.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://bizcard.katherinedoes.design" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/business-card" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # 2. build settings
 incremental: true
