@@ -5,38 +5,56 @@
 }
 
 .design-1__card-wrapper {
-
+	position: relative;
+	display: flex;
 }
 
 .design-1-card__dimensions {
 	height: 2in;
 	width: 3.5in;
-	padding: .16in;
+	padding: .08in;
+	margin: .5em;
 	border: 1px solid black;
 }
 
 .design-1-card__content {
+	position: relative;
+	display: grid;
+	grid-template-areas: 'name name'
+						 'title title'
+						 'url url'
+						 'email email'
+						 'phone phone';
+	height: 1.84in;
+	width: 3.34in;
 	line-height: 1;
+	border: 1px solid gray;
+}
+
+.design-1-card__comment {
+	color: gray;
 }
 
 .design-1-card__name {
-
+	grid-area: name;
+	font-family: $oswald;
+	font-size: 2em;
 }
 
 .design-1-card__title {
-
+	grid-area: title;
 }
 
 .design-1-card__email {
-
+	grid-area: email;
 }
 
 .design-1-card__number {
-
+	grid-area: phone;
 }
 
 .design-1-card__url {
-
+	grid-area: url;
 }
 
 .design-1-card__twitter {
