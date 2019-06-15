@@ -20,11 +20,11 @@
 .design-1-card__content {
 	position: relative;
 	display: grid;
-	grid-template-areas: 'name name'
-						 'title title'
-						 'url url'
-						 'email email'
-						 'phone phone';
+	grid-template-areas: '. name'
+						 '. title'
+						 'label-url url'
+						 'label-email email'
+						 'label-phone phone';
 	height: 1.84in;
 	width: 3.34in;
 	line-height: 1;
@@ -45,22 +45,27 @@
 	grid-area: title;
 }
 
+
+.design-1-card__url {
+	grid-area: url;
+}
+
+.design-1-card__url--label {
+	grid-area: label-url
+}
+
 .design-1-card__email {
 	grid-area: email;
+}
+
+.design-1-card__email--label {
+	grid-area: label-email;
 }
 
 .design-1-card__number {
 	grid-area: phone;
 }
 
-.design-1-card__url {
-	grid-area: url;
-}
-
-.design-1-card__twitter {
-
-}
-
-.design-1-card__github {
-
+.design-1-card__number--label {
+	grid-area: label-phone;
 }
