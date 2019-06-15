@@ -8,9 +8,11 @@
 	position: relative;
 	display: flex;
 	flex-flow: row wrap;
+	font-family: $roboto;
 }
 
 .design-1-card__dimensions {
+	position: relative;
 	height: 2in;
 	width: 3.5in;
 	padding: .08in;
@@ -35,8 +37,41 @@
 	height: 1.84in;
 	width: 3.34in;
 	line-height: 1.2;
-//	border: 1px solid gray;
 }
+
+// Stripes: //
+
+[class*="design-1-card__stripes-"] {
+	position: absolute;
+	display: grid;
+	grid-auto-rows: 1fr;
+	align-items: end;
+}
+
+.design-1-card__stripes-1 {
+	top: 0;
+	left: 0;
+	height: calc(2 * 12px);
+	transform: rotate(-35deg) translate(-5px, -8px);
+	.design-1-stripes__stripe:nth-of-type(2) {
+		width: 80px;
+		transform: translate(-8px, 0);
+	}
+}
+
+.design-1-card__stripes-2 {
+	bottom: 0;
+	right: 0;
+	height: calc(3 * 12px);
+}
+
+.design-1-stripes__stripe {
+	height: 4px;
+	width: 80px;
+	background-color: hsla(0,0,0,30%);
+}
+
+// Front: //
 
 .design-1-card__name {
 	grid-area: name;
