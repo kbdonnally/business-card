@@ -1,0 +1,54 @@
+title: Business Card Design
+description: >- # this means to ignore newlines until "baseurl:"
+  Designing business cards for my web design business.
+baseurl: "/business-card" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+# 2. build settings
+incremental: true
+markdown: kramdown
+
+exclude:
+  - .sass-cache
+  - Gemfile
+  - Gemfile.lock
+  - gulpfile.js
+  - package.json
+  - assets/python
+  - node_modules
+  - vendor
+
+permalink: /:year/:month/:day/:title/
+
+collections_dir: collections
+
+# example setup
+# collections:
+#  collection-name:
+#    output: true
+#    permalink: /:collection/:slug/
+
+# 3. assets
+sass:
+  sass_dir: "assets/css/_sass"
+
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      image: true
+  - scope:
+      path: "pages"
+    values:
+      order: 10
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# defaults explained:
+# 1. static images are in assets/img/*
+# 2. by default, any pages/* document has
+#    'order' var of value '10'
+# 3. all pages have default layout unless
+#    otherwise specified
