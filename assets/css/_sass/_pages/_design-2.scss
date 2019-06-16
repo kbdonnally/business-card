@@ -1,0 +1,251 @@
+/* Design 2 Styles: */ 
+
+.design-2__big-title {
+
+}
+
+.design-2__card-wrapper {
+	position: relative;
+	display: flex;
+	flex-flow: row wrap;
+	font-family: $roboto;
+}
+
+.design-2-card__dimensions {
+	position: relative;
+	height: 2in;
+	width: 3.5in;
+	padding: .08in;
+	margin: .5em;
+	border: 1px solid black;
+	overflow: hidden;
+	&:nth-of-type(2) {
+		padding: 0;
+	}
+}
+
+.design-2-card__content {
+	position: relative;
+	display: grid;
+	grid-template-columns: 80px 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr auto auto auto 1fr;
+	grid-template-areas: '. .'
+						 '. name'
+						 '. title'
+						 '. .'
+						 'label-url url'
+						 'label-email email'
+						 'label-phone phone'
+						 '. .';
+	align-items: center;
+	height: 1.84in;
+	width: 3.34in;
+	line-height: 1.2;
+}
+
+// Stripes: //
+
+[class*="design-2-card__stripes-"] {
+	position: absolute;
+	display: grid;
+	grid-auto-rows: 1fr;
+	align-items: end;
+}
+
+.design-2-card__stripes-1 {
+	top: 0;
+	left: 0;
+	height: calc(2 * 12px);
+	transform: rotate(-35deg) translate(-5px, -8px);
+	.design-2-stripes__stripe:nth-of-type(2) {
+		width: 80px;
+		transform: translate(-8px, 0);
+	}
+}
+
+.design-2-card__stripes-2 {
+	bottom: 0;
+	right: 0;
+	height: calc(3 * 14px);
+	transform: rotate(-35deg) translate(4px, 8px);
+	.design-2-stripes__stripe:nth-of-type(1) {
+		width: 140px;
+		transform: translate(27px, 5px);
+	}
+	.design-2-stripes__stripe:nth-of-type(2) {
+		justify-self: end;
+		width: 100px;
+		transform: translate(9px, 7px);
+	}
+	.design-2-stripes__stripe:nth-of-type(3) {
+		width: 65px;
+
+		justify-self: end;
+		transform: translate(-2px, 8px);
+	}
+}
+
+.design-2-stripes__stripe {
+	height: 4px;
+	width: 80px;
+	background-color: hsla(0,0,0,30%);
+}
+
+// Front: //
+
+.design-2-card__name {
+	grid-area: name;
+	font-family: $oswald;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+.design-2-card__title {
+	grid-area: title;
+	font-family: $oswald;
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+[class*="design-2-card__"][class*="--label"] {
+	justify-self: end;
+	padding-right: 16px;
+}
+
+.design-2-card__url {
+	grid-area: url;
+}
+
+.design-2-card__url--label {
+	grid-area: label-url
+}
+
+.design-2-card__email {
+	grid-area: email;
+}
+
+.design-2-card__email--label {
+	grid-area: label-email;
+}
+
+.design-2-card__number {
+	grid-area: phone;
+}
+
+.design-2-card__number--label {
+	grid-area: label-phone;
+}
+
+// Back of card:
+
+.design-2-card__back {
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto 1fr;
+	grid-template-areas: 'tabs'
+						 'url'
+						 'site';
+	height: 100%;
+}
+
+.design-2-back__tabs {
+	grid-area: tabs;
+	display: flex;
+	font-size: 12px;
+	border-width: 0px;
+	background-color: gray;
+}
+
+.design-2-tabs__tab {
+	padding: 2px;
+	background-color: gray;
+	border: 1px solid hsla(0,0,20%,1);
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+.design-2-back__url {
+	grid-area: url;
+	font-size: 12px;
+	background-color: gray;
+	border: 1px solid hsla(0,0,20%,1);
+}
+
+.design-2-url__url-holder {
+	margin: 1px 1rem;
+	padding: 1px;
+	background-color: white;
+	border-width: 0px;
+	border-radius: 5px;
+}
+
+.design-2-url__url-text {
+	border-width: 0px;
+	padding-left: 5px;
+}
+
+.design-2-back__content {
+	grid-area: site;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	grid-template-areas: 'title images'
+						 'text images';
+	height: 100%;
+}
+
+.design-2-content__title {
+	grid-area: title;
+	margin: 8px;
+	padding: 8px;
+	border: 2px solid hsla(0,0,0,20%);
+}
+
+.design-2-content__title-text {
+	font-weight: bold;
+}
+
+.design-2-content__content {
+	grid-area: text;
+	height: calc(100% - 8px);
+	margin: 8px;
+	margin-top: 0;
+	padding: 8px;
+	border: 2px solid hsla(0,0,0,20%);
+}
+
+.design-2-content__content-text {
+
+}
+
+.design-2-content__images {
+	grid-area: images;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	height: 100%;
+	margin-top: 4px;
+	margin-right: 8px;
+}
+
+.design-2-images__image {
+	justify-self: center;
+	align-self: start;
+	height: 60px;
+	width: 80px;
+	border: 2px solid hsla(0,0,20%,1);
+	overflow: hidden;
+	&:nth-of-type(1) {
+		margin-top: 4px;
+	}
+}
+
+.design-2-image__stripe {
+	width: 98px;
+	height: 2px;
+	background-color: hsla(0,0,20%,1);
+	&:nth-of-type(1) {
+		transform: translate(-12px,28px) rotate(-36.87deg);
+	}
+	&:nth-of-type(2) {
+		transform: translate(-11px,25.5px) rotate(36.87deg);
+	}
+}
