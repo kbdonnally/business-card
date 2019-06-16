@@ -18,6 +18,7 @@
 	padding: .08in;
 	margin: .5em;
 	border: 1px solid black;
+	overflow: hidden;
 	&:nth-of-type(2) {
 		padding: 0;
 	}
@@ -26,7 +27,7 @@
 .design-1-card__content {
 	position: relative;
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 80px 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr auto auto auto 1fr;
 	grid-template-areas: '. .'
 						 '. name'
@@ -108,7 +109,7 @@
 
 [class*="design-1-card__"][class*="--label"] {
 	justify-self: end;
-	padding-right: .5em;
+	padding-right: 16px;
 }
 
 .design-1-card__url {
@@ -231,6 +232,7 @@
 	height: 60px;
 	width: 80px;
 	border: 2px solid hsla(0,0,20%,1);
+	overflow: hidden;
 	&:nth-of-type(1) {
 		margin-top: 4px;
 	}
@@ -241,7 +243,7 @@
 	height: 2px;
 	background-color: hsla(0,0,20%,1);
 	&:nth-of-type(1) {
-		transform: translate(-11px,28px) rotate(-36.87deg);
+		transform: translate(-12px,28px) rotate(-36.87deg);
 	}
 	&:nth-of-type(2) {
 		transform: translate(-11px,25.5px) rotate(36.87deg);
