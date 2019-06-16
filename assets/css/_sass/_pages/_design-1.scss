@@ -27,7 +27,7 @@
 .design-1-card__content {
 	position: relative;
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 80px 1fr;
 	grid-template-rows: 1fr 1fr 1fr 1fr auto auto auto 1fr;
 	grid-template-areas: '. .'
 						 '. name'
@@ -109,7 +109,7 @@
 
 [class*="design-1-card__"][class*="--label"] {
 	justify-self: end;
-	padding-right: .5em;
+	padding-right: 16px;
 }
 
 .design-1-card__url {
