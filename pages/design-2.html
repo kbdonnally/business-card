@@ -1,0 +1,67 @@
+---
+layout: no-style
+title: Design 2
+permalink: /design-2/
+---
+
+<h1 class="design-2__big-title">Design 2</h1>
+
+{% assign card = site.data.card-info %}
+
+<main class="design-2__card-wrapper">
+	<section class="design-2-card__dimensions">
+		<div class="design-2-card__stripes-1">
+			<div class="design-2-stripes__stripe"></div>
+		</div>
+		<div class="design-2-card__stripes-2">
+			<div class="design-2-stripes__stripe"></div>
+		</div>
+		<div class="design-2-card__content">
+			<div class="design-2-card__name">{{ card.name }}</div>
+			<div class="design-2-card__title">Web Designer</div>
+			<div class="design-2-card__url--label">web:</div>
+			<div class="design-2-card__url">{{ card.url }}</div>
+			<div class="design-2-card__email--label">email:</div>
+			<div class="design-2-card__email">{{ card.email }}</div>
+			<div class="design-2-card__number--label">phone:</div>
+			<div class="design-2-card__number">{{ card.phone }}</div>
+		</div>
+	</section>
+
+	<section class="design-2-card__dimensions">
+		<!-- fake browser design: -->
+		<div class="design-2-card__back">
+			<!-- tabs -->
+			<div class="design-2-back__tabs">
+				<div class="design-2-tabs__tab">Your Site</div>
+				<div class="design-2-tabs__tab">Tab 2</div>
+				<div class="design-2-tabs__tab">Tab 3</div>
+			</div>
+			<!-- url display -->
+			<div class="design-2-back__url">
+				<div class="design-2-url__url-holder">
+					<div class="design-2-url__url-text">katherinedoes.design/business-card/</div>
+				</div>
+			</div>
+			<!-- lil website -->
+			<div class="design-2-back__content">
+				<div class="design-2-content__title">
+					<div class="design-2-content__title-text">Katherine's Website Design</div>
+				</div>
+				<div class="design-2-content__content">
+					<div class="design-2-content__content-text">This business card was created with CSS!</div>
+				</div>
+				<div class="design-2-content__images">
+					<div class="design-2-images__image">
+						<div class="design-2-image__stripe"></div>
+						<div class="design-2-image__stripe"></div>
+					</div>
+					<div class="design-2-images__image">
+						<div class="design-2-image__stripe"></div>
+						<div class="design-2-image__stripe"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
