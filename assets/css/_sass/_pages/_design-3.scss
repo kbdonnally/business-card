@@ -1,1 +1,53 @@
 /* Design 3 Styles */
+
+.design-3-wrapper {
+	padding: 1.5rem 4.167%;
+}
+
+.design-3__card-front {
+	position: relative;
+	display: grid;
+	grid-template-areas: 'name name name'
+						 'title title lines1'
+						 'lines2 lines2 lines2'
+						 'labels info info';
+	height: 2in;
+	width: 3.5in;
+	border: 1px solid black;
+}
+
+.design-3__name {
+	grid-area: name;
+}
+
+.design-3__title {
+	grid-area: title;
+}
+
+.design-3__lines-1 {
+	grid-area: lines1;
+}
+
+.design-3__lines-2 {
+	grid-area: lines2;
+}
+
+.design-3__labels {
+	grid-area: labels;
+}
+
+.design-3-labels__label {
+
+}
+
+.design-3__infos {
+	grid-area: info;
+}
+
+.design-3-infos__info {
+
+}
+
+.design-3__card-back {
+
+}
