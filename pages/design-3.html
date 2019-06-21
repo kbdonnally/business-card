@@ -1,0 +1,30 @@
+---
+title: Design 3
+layout: no-style
+permalink: /design-3/
+---
+
+<main class="design-3-wrapper">
+
+	{% assign card = site.data.card-info %}
+
+	<section class="design-3__card-front">
+		<div class="design-3__name">Katherine Donnally</div>
+		<div class="design-3__title">Web Designer</div>
+		<div class="design-3__lines-1"></div>
+		<div class="design-3__lines-2"></div>
+		<div class="design-3__labels">
+			<div class="design-3-labels__label">web:</div>
+			<div class="design-3-labels__label">email:</div>
+			<div class="design-3-labels__label">phone:</div>
+		</div>
+		<div class="design-3__infos">
+			<div class="design-3-infos__info">{{ card.url }}</div>
+			<div class="design-3-infos__info">{{ card.email }}</div>
+			<div class="design-3-infos__info">{{ card.phone }}</div>
+		</div>
+	</section>
+
+	<section class="design-3__card-back">
+	</section>
+</main>
