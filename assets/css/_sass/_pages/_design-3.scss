@@ -1,6 +1,7 @@
 /* Design 3 Styles */
 
 .design-3-wrapper {
+	display: flex;
 	padding: 1.5rem 4.167%;
 }
 
@@ -13,6 +14,7 @@
 						 'labels info info';
 	height: 2in;
 	width: 3.5in;
+	margin: 1.5rem;
 	border: 1px solid black;
 }
 
@@ -50,4 +52,70 @@
 
 .design-3__card-back {
 
+}
+
+/* ------ Back of card: -------- */
+
+.design-3__card-back {
+	position: relative;
+	display: grid;
+	grid-template-rows: auto auto 1fr 1fr 1fr 1fr;
+	grid-template-columns: 2fr 1fr;
+	grid-template-areas: 'tabs tabs'
+						 'url url'
+						 'title img1'
+						 'content img1'
+						 'content img2'
+						 'content img2';
+	height: 2in;
+	width: 3.5in;
+	margin: 1.5rem;
+	border: 1px solid black;
+}
+
+.design-3-back__tabs {
+	grid-area: tabs;
+	display: flex;
+	background-color: coral;
+	border-bottom: 1px solid black;
+}
+
+.design-3-tabs__tab {
+	padding: 0px 2px;
+	font-size: 12px;
+	border-right: 1px solid black;
+}
+
+.design-3-back__url {
+	grid-area: url;
+	background-color: coral;
+}
+
+.design-3-url__title {
+	width: 80%;
+	margin: 2px auto;
+	padding-left: 4px;
+	font-size: 12px;
+	background-color: white;
+	border-radius: 8px;
+}
+
+.design-3-back__title {
+	grid-area: title;
+	border: 1px solid hsla(0, 0, 50%, 1);
+}
+
+.design-3-back__content {
+	grid-area: content;
+	border: 1px solid hsla(0, 0, 50%, 1);
+}
+
+.design-3-back__img-1 {
+	grid-area: img1;
+	border: 1px solid black;
+}
+
+.design-3-back__img-2 {
+	grid-area: img2;
+	border: 1px solid black;
 }
